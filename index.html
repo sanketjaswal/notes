@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Notes Plus</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+
+  <body onload="getNotes()">
+    <div class="navbar">
+      <h1 class="logo">Notes Plus</h1>
+      <button class="btn uploadButton" onclick="uploadData()">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div id="notes_area">
+      <!-- <div class="new_note_container">
+            <div class="note_icon trash_icon"><i class="fas fa-trash-alt"></i></div>
+            <div class="note_icon down_icon"><i class="icon fas fa-file-download"></i></div>
+            <span contenteditable class="textarea new_text_area">
+            </span>
+        </div>  -->
+    </div>
+    <button class="btn addButton" onclick="addNote('')">
+      <i class="fas fa-plus"></i>
+    </button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
