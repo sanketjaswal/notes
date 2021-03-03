@@ -16,10 +16,10 @@ function downloadNote(id) {
   linker.innerHTML = "Save";
   linker.setAttribute("href", URl);
   linker.setAttribute("download", `${id}.txt`);
-  linker.setAttribute("style", "display:block");
+  linker.setAttribute("style", "display:none");
 
   document.getElementById("notes_area").appendChild(linker);
-  // linker.click();
+  linker.click();
   console.log(linker);
 }
 
@@ -104,5 +104,6 @@ async function postNotes(allNotes) {
     }
   );
   response = await response.json();
+  // alert("Data updated");
   console.log(response);
 }

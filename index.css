@@ -2,7 +2,7 @@
   --site-color: rgba(112, 112, 112, 0.315);
   --note-icon-size: 35px;
   --base-color: rgb(37, 34, 53);
-  --base-color-light: rgba(37, 34, 53, 0.918);
+  --base-color-light: rgba(53, 51, 75, 0.979);
 }
 
 html body {
@@ -69,6 +69,8 @@ body {
 
 .btn:hover {
   background-color: var(--base-color-light);
+  box-shadow: 0px 0px 5px 4px rgba(77, 77, 77, 0.452);
+
 }
 
 .btn:active {
@@ -81,7 +83,7 @@ body {
   margin: 20px auto;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  width: 98%;
+  width: 97%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -157,4 +159,26 @@ body {
 
 .down_icon:active {
   background-color: rgb(32, 132, 178);
+}
+
+@media only screen and (max-width: 410px) {
+
+  .navbar {
+    min-height: 55px;
+  }
+
+  .new_text_area {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 90px;
+  }
+
+  .new_note_container {
+    margin: 10px 16px;
+  }
+
+  .addButton {
+    bottom: 20;
+    right: 20;
+  } 
 }
