@@ -104,6 +104,6 @@ async function postNotes(allNotes) {
     }
   );
   response = await response.json();
-  // alert("Data updated");
+  alert("Data updated");
   console.log(response);
 }
