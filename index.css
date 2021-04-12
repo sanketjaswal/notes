@@ -165,9 +165,32 @@ body {
 
                   /* ANIMATIONS */
 
-/* .new_note_container {
 
-}         */
+@media only screen and (max-width: 500px){
+  .deletion_animation{
+    height: 60px;
+    transition: height 2s;
+    transform: scale(0) ;
+    padding: 0px ;
+    margin-top: -85px ;
+    margin-left: -400px ; 
+    min-width: 4% ;
+    transition: 0.8s;
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 501px){
+  .deletion_animation{
+    height: 60px;
+    transition: height 2s;
+    transform: scale(0) ;
+    padding: 0px ;
+    margin-top: -55px ;
+    transition: 0.8s;
+    opacity: 0;
+  }
+}
 
 
 @media only screen and (max-width: 410px) {

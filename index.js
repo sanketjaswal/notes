@@ -1,7 +1,18 @@
 let idCount = 0;
 
 function deleteNote(id) {
-  document.getElementById(id).remove();
+  var delaytimer = 450;
+  deleteAnimation(id);
+  setTimeout(function() { 
+    document.getElementById(id).remove();
+    console.log("here");
+    }, delaytimer);
+  // document.getElementById(id).remove();
+}
+
+function deleteAnimation(id){
+  document.getElementById(id).setAttribute("class","deletion_animation");  
+  console.log("gg");
 }
 
 function downloadNote(id) {
