@@ -2,7 +2,7 @@
   --site-color: rgba(112, 112, 112, 0.315);
   --note-icon-size: 35px;
   --base-color: rgb(37, 34, 53);
-  --base-color-light: rgba(53, 51, 75, 0.979);
+  --base-color-light: rgba(37, 34, 53, 0.918);
 }
 
 html body {
@@ -69,7 +69,6 @@ body {
 
 .btn:hover {
   background-color: var(--base-color-light);
-  box-shadow: 0px 0px 5px 4px rgba(77, 77, 77, 0.452);
 }
 
 .btn:active {
@@ -80,20 +79,21 @@ body {
 
 #notes_area {
   margin: 20px auto;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  width: 97%;
-  /* display: grid; */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  border-radius: 30px;
+  width: 95%;
   /* background-color: aqua; */
+  display: flex;
+  /* grid-auto-flow: dense; */
+  justify-content: center;
   flex-wrap: wrap;
+  /* grid-gap: 15px; */
+  align-items: flex-start;
 }
 
 .new_note_container {
   position: relative;
   margin: 16px 16px;
+  /* background-color: darkgreen; */
 }
 
 .note_icon {
@@ -162,8 +162,6 @@ body {
   background-color: rgb(32, 132, 178);
 }
 
-/* ANIMATIONS */
-
 @media only screen and (max-width: 500px) {
   .deletion_animation {
     height: 60px;
@@ -198,11 +196,11 @@ body {
   .new_text_area {
     min-width: 300px;
     max-width: 300px;
-    min-height: 80px;
+    min-height: 70px;
   }
 
   .new_note_container {
-    margin: 10px 16px;
+    margin: 6px 16px;
   }
 
   .addButton {
