@@ -3,15 +3,15 @@ let idCount = 0;
 function deleteNote(id) {
   var delaytimer = 450;
   deleteAnimation(id);
-  setTimeout(function() { 
+  setTimeout(function () {
     document.getElementById(id).remove();
     console.log("here");
-    }, delaytimer);
+  }, delaytimer);
   // document.getElementById(id).remove();
 }
 
-function deleteAnimation(id){
-  document.getElementById(id).setAttribute("class","deletion_animation");  
+function deleteAnimation(id) {
+  document.getElementById(id).setAttribute("class", "deletion_animation");
   console.log("gg");
 }
 
@@ -93,14 +93,13 @@ function uploadData() {
     let trm = allNotes[g].value.trim();
     if (trm !== "") {
       notesValue.push(trm);
-      console.log(g);
+      // console.log(g);
     }
   }
 
   // notesValue = allNotes.map()
 
   console.log(notesValue);
-
   postNotes(notesValue);
 }
 
