@@ -1,18 +1,17 @@
 let idCount = 0;
+let timeoutId;
 
 function deleteNote(id) {
   var delaytimer = 450;
   deleteAnimation(id);
   setTimeout(function () {
     document.getElementById(id).remove();
-    console.log("here");
+    uploadData();
   }, delaytimer);
-  // document.getElementById(id).remove();
 }
 
 function deleteAnimation(id) {
   document.getElementById(id).setAttribute("class", "deletion_animation");
-  console.log("gg");
 }
 
 function downloadNote(id) {
@@ -31,7 +30,7 @@ function downloadNote(id) {
 
   document.getElementById("notes_area").appendChild(linker);
   linker.click();
-  console.log(linker);
+  // console.log(linker);
 }
 
 function addNote(apiData = "") {
@@ -54,6 +53,7 @@ function addNote(apiData = "") {
   const textArea = document.createElement("textarea");
   textArea.setAttribute("id", "text" + idCount);
   textArea.setAttribute("class", "new_text_area");
+  textArea.setAttribute("oninput", "autoUpdateTimer()");
   textArea.value = apiData;
 
   newDiv.appendChild(trash_div);
@@ -77,9 +77,17 @@ async function getNotes() {
 
   let NoteList = response.notesList;
 
+  console.log(NoteList);
+
   for (let p = 0; p < NoteList.length; p++) {
     addNote(NoteList[p]);
   }
+  console.log("got data");
+}
+
+function autoUpdateTimer() {
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(uploadData, 3000);
 }
 
 function uploadData() {
@@ -87,7 +95,6 @@ function uploadData() {
   let notesValue = [];
 
   allNotes = document.getElementsByClassName("new_text_area");
-  console.log(allNotes);
 
   for (let g = 0; g < allNotes.length; g++) {
     let trm = allNotes[g].value.trim();
@@ -114,6 +121,5 @@ async function postNotes(allNotes) {
     }
   );
   response = await response.json();
-  alert("Data updated");
   console.log(response);
 }
