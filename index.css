@@ -81,7 +81,6 @@ body {
   margin: 20px auto;
   border-radius: 30px;
   width: 95%;
-  /* background-color: aqua; */
   display: flex;
   /* grid-auto-flow: dense; */
   justify-content: center;
@@ -93,7 +92,7 @@ body {
 .new_note_container {
   position: relative;
   margin: 16px 16px;
-  /* background-color: darkgreen; */
+  animation: note_addition 0.6s ease;
 }
 
 .note_icon {
@@ -162,33 +161,12 @@ body {
   background-color: rgb(32, 132, 178);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {                /*mobile*/
   .deletion_animation {
-    height: 60px;
-    transition: height 2s;
-    transform: scale(0);
-    padding: 0px;
-    margin-top: -85px;
-    margin-left: -400px;
-    min-width: 4%;
-    transition: 0.8s;
-    opacity: 0;
+    margin: 6px 16px;
+    animation: deletion_mobile 0.6s ease;    
   }
-}
 
-@media only screen and (min-width: 501px) {
-  .deletion_animation {
-    height: 60px;
-    transition: height 2s;
-    transform: scale(0);
-    padding: 0px;
-    margin-top: -55px;
-    transition: 0.8s;
-    opacity: 0;
-  }
-}
-
-@media only screen and (max-width: 410px) {
   .navbar {
     min-height: 55px;
   }
@@ -208,3 +186,48 @@ body {
     right: 20;
   }
 }
+
+@media only screen and (min-width: 451px) {                /*desktop*/
+  .deletion_animation {
+    margin: 16px;
+    animation: deletion_desktop 0.6s ease;
+  }
+}
+
+                              /* KEYFRAMES (animation codes)*/
+
+
+@keyframes note_addition {
+  0% {
+      opacity: 0;
+      transform: translateY(25px) scale(.9);      
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes deletion_desktop {
+  0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(.9) translateY(-30px)  ;     
+  }
+}
+
+@keyframes deletion_mobile{
+  0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(.8) translateY(-15px)  ;     
+  }
+}
+
+

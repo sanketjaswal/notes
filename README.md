@@ -12,6 +12,7 @@ https://sanketjaswal.github.io/notes/
 * Create a new note by clicking / tapping on `plus button` on the bottom right corner
 * Hover on the note to get `Delete` and `Download` options
 * Notes can be resized through bottom right corner of notes
+* Also accessible in small scale screens
 
 ### Notes
 
