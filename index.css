@@ -87,7 +87,6 @@ body {
   flex-wrap: wrap;
   /* grid-gap: 15px; */
   align-items: flex-start;
-  background: #000;
 }
 
 .new_note_container {
@@ -142,6 +141,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px 0px 3.5px 2.5px rgba(77, 77, 77, 0.452);
+  resize: none;
 }
 
 .new_note_container:hover .note_icon:not(:active) {
@@ -168,13 +168,13 @@ body {
   }
 
   .navbar {
-    min-height: 55px;
+    min-height: 65px;
     padding: 0px 85px;
   }
 
   .new_text_area {
-    min-width: 310px;
-    min-height: 70px;
+    min-width: 305px;
+    min-height: 73px;
   }
 
   .new_note_container {
