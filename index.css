@@ -22,7 +22,7 @@ body {
 .navbar {
   margin: 0px 0px;
   background-color: var(--base-color);
-  padding: 0px 25px;
+  padding: 0px 68px;
   position: sticky;
   top: 0;
   min-height: 60px;
@@ -80,13 +80,14 @@ body {
 #notes_area {
   margin: 20px auto;
   border-radius: 30px;
-  width: 95%;
+  width: 90%;
   display: flex;
   /* grid-auto-flow: dense; */
   justify-content: flex-start;
   flex-wrap: wrap;
   /* grid-gap: 15px; */
   align-items: flex-start;
+  background: #000;
 }
 
 .new_note_container {
@@ -135,8 +136,7 @@ body {
   background-color: white;
   border: 1px solid grey;
   min-height: 130px;
-  min-width: 360px;
-  max-width: 700px;
+  width: 360px;
   outline: none;
   line-height: 20px;
   border-radius: 10px;
@@ -169,11 +169,11 @@ body {
 
   .navbar {
     min-height: 55px;
+    padding: 0px 85px;
   }
 
   .new_text_area {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 310px;
     min-height: 70px;
   }
 
