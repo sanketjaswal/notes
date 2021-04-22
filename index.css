@@ -83,7 +83,7 @@ body {
   width: 95%;
   display: flex;
   /* grid-auto-flow: dense; */
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   /* grid-gap: 15px; */
   align-items: flex-start;

@@ -77,7 +77,7 @@ async function getNotes() {
 
   let NoteList = response.notesList;
 
-  console.log(NoteList);
+  // console.log(NoteList);
 
   for (let p = 0; p < NoteList.length; p++) {
     addNote(NoteList[p]);
@@ -89,6 +89,12 @@ function autoUpdateTimer() {
   clearTimeout(timeoutId);
   timeoutId = setTimeout(uploadData, 3000);
 }
+
+// function updtionColorChanger(){
+  // document.getElementsByClassName("logo").style.color = "red";
+  // Logo.style.color = "red";
+  // console.log(Logo);
+// }
 
 function uploadData() {
   let allNotes = [];
@@ -106,7 +112,7 @@ function uploadData() {
 
   // notesValue = allNotes.map()
 
-  console.log(notesValue);
+  // console.log(notesValue);
   postNotes(notesValue);
 }
 
@@ -122,4 +128,6 @@ async function postNotes(allNotes) {
   );
   response = await response.json();
   console.log(response);
+  // updtionColorChanger();
+
 }

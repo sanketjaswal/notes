@@ -1,0 +1,15 @@
+{
+    "name": "Notes Plus by Sanket Jaswal",
+    "short_name": "Notes Plus",
+    "start_url": "index.html",
+    "icons": [
+      {
+        "src": "Pictures/note.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "rgb(37, 34, 53)",
+    "background_color": "rgba(112, 112, 112, 0.315)",
+    "display": "standalone"
+  }
