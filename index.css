@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 3;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -168,12 +168,13 @@ body {
   }
 
   .navbar {
-    min-height: 65px;
-    padding: 0px 85px;
+    min-height: 70px;
+    justify-content: center;
+
   }
 
   .new_text_area {
-    min-width: 305px;
+    min-width: 300px;
     min-height: 73px;
   }
 
