@@ -19,7 +19,3 @@ https://sanketjaswal.github.io/notes/
 * Swipe down to reload
 * Notes are autosaved
 * Notes are saved online in API
-
-### License
-
-* MIT
